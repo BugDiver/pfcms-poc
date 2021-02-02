@@ -12,11 +12,6 @@ jobs:
       steps:
         - uses: actions/checkout@v2
 
-        - name: Setup git
-          run: |
-            git config --global user.name "$(git --no-pager log --format=format:'%an' -n 1)"
-            git config --global user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
-
         - name: Set up Nodejs
           uses: actions/setup-node@v1
           with:
@@ -24,10 +19,17 @@ jobs:
 
         - name: Install
           run: npm install
-        
-        - name: Deploy
-          run: npm run deploy
+
+        - name: Build
           env:
             CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
             CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          run : npm run build
 
+        - name: Deploy 🚀
+          uses: JamesIves/github-pages-deploy-action@3.7.1
+          with:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            BRANCH: gh-pages
+            FOLDER: public
+            CLEAN: true
