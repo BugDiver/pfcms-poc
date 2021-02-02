@@ -20,6 +20,3 @@ jobs:
 
       - name: unit-tests
         run: npm test
-          
-      - name: build
-        run: npm run build
