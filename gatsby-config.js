@@ -7,16 +7,17 @@
 module.exports = {
   siteMetadata: {
     title: "Library",
-    description: "A collection of books"
+    description: "A collection of books",
   },
+  pathPrefix: "/pfcms-poc",
   plugins: [
     {
-      resolve: 'gatsby-source-contentful',
+      resolve: "gatsby-source-contentful",
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
-      }
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
     },
-    'gatsby-plugin-sass'
+    "gatsby-plugin-sass",
   ],
 }
