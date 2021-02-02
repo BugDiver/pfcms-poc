@@ -1,25 +1,19 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import "./books.modules.scss"
 const Books = ({ books }) => {
-  const style = {
-    maxHeight: "192px",
-    maxWidth: "144px",
-  }
   return (
-    <div>
+    <div className={"books-card-list"}>
       {books.map(edge => {
         const book = edge.node
         return (
           <Link to={`/book/${book.slug}`}>
-            <div className="tc grow bg-light-green br3 pa3 ma2 dib bw2 shadow-5">
-              <img
-                style={style}
-                alt={book.title}
-                src={`https://${book.cover.file.url}`}
-              />
-              <h3>{book.title}</h3>
-              <p>{book.author.join(", ")}</p>
+            <div className={`bookCard`}>
+              <img alt={book.title} src={`https://${book.cover.file.url}`} />
+              <div className={"book-card-description"}>
+                <h3>{book.title}</h3>
+                <p>{book.author.join(", ")}</p>
+              </div>
             </div>
           </Link>
         )

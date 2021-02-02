@@ -3,7 +3,6 @@ import React from "react"
 import "tachyons"
 import Books from "../components/books"
 import Layout from "../components/layout"
-import Scroll from "../components/scroll"
 import "./index.scss"
 
 const IndexPage = () => {
@@ -27,9 +26,7 @@ const IndexPage = () => {
   `)
   return (
     <Layout>
-      <Scroll>
-        <Books books={data.allContentfulBook.edges} />
-      </Scroll>
+      <Books books={data.allContentfulBook.edges} />
     </Layout>
   )
 }

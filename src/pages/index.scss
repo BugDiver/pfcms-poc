@@ -2,10 +2,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: linear-gradient(to left, rgba(48, 99, 240, 1) 0%, rgba(0,128,128,1) 100%); /* w3c */
+  background-color: rgb(237, 240, 244);
 }
 
 a {
+  color: rgb(31, 31, 31);
   text-decoration: none;
   cursor: default;
 }
