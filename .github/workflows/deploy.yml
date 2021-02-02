@@ -1,0 +1,25 @@
+name: Deploy on PR merge
+on:
+  push:
+    branches: 
+      - main
+
+jobs:
+  deploy:
+      runs-on: ubuntu-latest
+      env: 
+        GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+      steps:
+        - uses: actions/checkout@v2
+
+        - name: Set up Nodejs
+          uses: actions/setup-node@v1
+          with:
+            node-version: '12.x'
+
+        - name: Install
+          run: npm install
+        
+        - name: Deploy
+          run: npm run Deploy
+

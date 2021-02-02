@@ -1,0 +1,25 @@
+name: build
+
+on: [pull_request]
+
+jobs:
+  tests:
+    name: Node ${{ matrix.node_version }} ${{ matrix.os }}
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Nodejs
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - name: Install
+        run: npm install
+
+      - name: unit-tests
+        run: npm test
+          
+      - name: build
+        run: npm run build
