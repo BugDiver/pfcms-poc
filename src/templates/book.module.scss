@@ -8,12 +8,14 @@
 }
 
 .container {
+
 	@include margin-center(0);
 	@include box-shadow(0rem, 0.2rem, 0.5rem, 0.2rem, lightgray);
 	display: flex;
 	flex-direction: row;
 	width: 75%;
 	padding: 5rem;
+	background-color: white;
 
 	.cover {
 		width: 20%;
