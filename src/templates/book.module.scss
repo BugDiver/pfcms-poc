@@ -4,7 +4,7 @@
 }
 
 @mixin box-shadow($offsetX, $offsetY, $blurRadius, $spreadRadius, $color) {
-	box-shadow: $offsetX, $offsetY, $blurRadius, $spreadRadius, $color;
+	box-shadow: $offsetX $offsetY $blurRadius $spreadRadius $color;
 }
 
 .container {
