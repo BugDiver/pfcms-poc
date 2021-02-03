@@ -2,7 +2,7 @@ name: Deploy on PR merge
 on:
   push:
     branches: 
-      - main
+      - styles
   repository_dispatch:
     types: [publish-event]
 
@@ -32,6 +32,6 @@ jobs:
           uses: JamesIves/github-pages-deploy-action@3.7.1
           with:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            BRANCH: gh-pages
+            BRANCH: gh-pages-other
             FOLDER: public
             CLEAN: true
