@@ -1,0 +1,44 @@
+@mixin margin-center($margin-left-right) {
+	margin: $margin-left-right auto;
+
+}
+
+@mixin box-shadow($offsetX, $offsetY, $blurRadius, $spreadRadius, $color) {
+	box-shadow: $offsetX, $offsetY, $blurRadius, $spreadRadius, $color;
+}
+
+.container {
+	@include margin-center(0);
+	@include box-shadow(0rem, 0.2rem, 0.5rem, 0.2rem, lightgray);
+	display: flex;
+	flex-direction: row;
+	width: 75%;
+	padding: 5rem;
+
+	.cover {
+		width: 20%;
+		margin: 0 auto;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.content {
+		width: 60%;
+		text-align: left;
+
+		.heading {
+
+			display: flex;
+			flex-flow: row;
+			align-items: center;
+
+			span {
+				margin-left: 1rem;
+				font-weight: 800;
+				color: gray;
+			}
+		}
+	}
+}

@@ -1,7 +1,8 @@
 name: Deploy on PR merge
 on:
   push:
-    branches: 
+    branches:
+      - main 
       - styles
   repository_dispatch:
     types: [publish-event]
