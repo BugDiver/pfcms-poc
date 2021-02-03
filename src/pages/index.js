@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import "tachyons"
-import Books from "../components/books"
+import Books from "../components/Books/books"
 import Layout from "../components/layout"
 import "./index.scss"
 

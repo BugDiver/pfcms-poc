@@ -7,8 +7,15 @@
   src: local('SEGA LOGO FONT'), url('./SEGA.woff') format('woff');
 }
 
-.h1 {
-  font-family: 'SEGA LOGO FONT', sans-serif;
-  font-weight: 200;
-  color: #0ccac4;
+.header {
+  margin-bottom: 7rem;
+  margin-top: 3rem;
+
+  .h1 {
+    font-family: 'SEGA LOGO FONT', sans-serif;
+    font-weight: 200;
+    color: #0ccac4;
+    margin: 0.5rem;
+  }
+
 }

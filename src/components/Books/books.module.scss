@@ -1,4 +1,4 @@
-.books-card-list {
+.bookCardList {
 	display: flex;
 	flex-flow: row;
 	width: 90%;
@@ -22,9 +22,13 @@
 			max-height: 10rem;
 		}
 
-		.book-card-description {
-			font-family: sans-serif;
-			color: rgb(65, 65, 65);
+		.bookCardDescription {
+			color: #414141;
+			display: flex;
+			flex-flow: column;
+			line-height: 0rem;
+			color: #565252;
+
 		}
 	}
 }
