@@ -1,0 +1,8 @@
+@mixin margin-center($margin-left-right) {
+	margin: $margin-left-right auto;
+
+}
+
+@mixin box-shadow($offsetX, $offsetY, $blurRadius, $spreadRadius, $color) {
+	box-shadow: $offsetX $offsetY $blurRadius $spreadRadius $color;
+}
