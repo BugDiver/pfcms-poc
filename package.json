@@ -6,7 +6,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build --prefix-paths",
-    "develop": "env-cmd -f .env.development gatsby develop",
+    "develop": "GATSBY_CONTENTFUL_OFFLINE=true && env-cmd -f .env.development gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",

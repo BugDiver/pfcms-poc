@@ -27,9 +27,9 @@
 			color: #414141;
 			display: flex;
 			flex-flow: column;
-			line-height: 0rem;
+			flex-wrap: nowrap;
 			color: #565252;
-
+			flex-wrap: wrap;
 		}
 	}
 }

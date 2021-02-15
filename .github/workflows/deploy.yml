@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main 
-      # - styles
+      - styles
   repository_dispatch:
     types: [publish-event]
 
